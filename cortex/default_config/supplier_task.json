@@ -1,0 +1,6 @@
+{
+  "quantity": 100,
+  "budget": "13000",
+  "deadline_days": 3,
+  "source": "[{\"supplier\":\"Alpha\",\"unit_price\":\"100\",\"shipping\":\"2500\",\"quantity_available\":200,\"delivery_days\":2},{\"supplier\":\"Beta\",\"unit_price\":\"110\",\"shipping\":\"500\",\"quantity_available\":150,\"delivery_days\":3},{\"supplier\":\"Gamma\",\"unit_price\":\"90\",\"shipping\":\"300\",\"quantity_available\":200,\"delivery_days\":5}]"
+}

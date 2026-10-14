@@ -1,0 +1,6 @@
+{
+  "max_words": 30,
+  "required_sections": [
+    "Recommendation"
+  ]
+}

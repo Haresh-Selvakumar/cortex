@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "steps": [{
+    "id": "inspect_repository", "task_type": "analysis", "goal": "Inspect only the explicitly configured repository.",
+    "execution_kind": "tool", "required_inputs": ["user_goal"], "missing_essential_information": [], "depends_on": [],
+    "required_capabilities": ["analysis", "github"], "expected_output": "tool_result", "completion_checks": ["tool_verified"],
+    "tool": {"name": "git_inspect", "arguments": {"repository": "authorized", "files": ["description.md"]}}
+  }]
+}

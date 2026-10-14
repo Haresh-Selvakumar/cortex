@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "compare",
+      "task_type": "analysis",
+      "goal": "Compare suppliers",
+      "execution_kind": "supplier",
+      "required_inputs": [
+        "user_goal",
+        "supplier_task"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "analysis",
+        "supplier_analysis"
+      ],
+      "expected_output": "supplier_recommendation",
+      "completion_checks": [
+        "supplier_verified"
+      ]
+    }
+  ]
+}

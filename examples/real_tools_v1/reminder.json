@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "steps": [
+    {
+      "id": "notify",
+      "task_type": "scheduling",
+      "goal": "Create the explicitly timed local reminder.",
+      "execution_kind": "tool",
+      "required_inputs": [
+        "user_goal"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "reminders"
+      ],
+      "expected_output": "tool_result",
+      "completion_checks": [
+        "tool_verified"
+      ],
+      "tool": {
+        "name": "reminder_create",
+        "arguments": {
+          "message": "Review the saved Cortex project description",
+          "at": "REPLACE_WITH_FUTURE_ISO_DATE_24H_TIME",
+          "timezone": "UTC"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.cortex
+.test_tmp
+.env
+.env.*
+.git
+runs
+snapshots
+**/__pycache__

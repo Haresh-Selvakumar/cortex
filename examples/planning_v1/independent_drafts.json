@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "intro",
+      "task_type": "documents",
+      "goal": "Draft exactly one sentence introducing Cortex.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    },
+    {
+      "id": "limitation",
+      "task_type": "documents",
+      "goal": "Draft exactly one sentence explaining that code drafts are not executed.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}

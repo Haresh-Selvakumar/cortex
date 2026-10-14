@@ -1,0 +1,1 @@
+Cortex selects eligible workers, verifies supplier calculations in Python, and records bounded execution traces. Draft prose is not generally fact-verified.

@@ -1,0 +1,75 @@
+# Publish only reviewed project roots. Stage with the publication manifest;
+# do not use `git add .` to override this review boundary.
+/*
+!/.gitignore
+!/.env.example
+!/pyproject.toml
+!/requirements-build.txt
+!/README.md
+!/START_HERE.md
+!/LICENSE_NOTICE.md
+!/publication-manifest.json
+!/cortex/
+!/tests/
+!/scripts/
+!/docs/
+!/examples/
+!/evaluation/
+!/deployment/
+!/submission/
+!/config/
+
+# Local state, evidence and checkpoints remain on disk, never in Git.
+/.cortex/
+/.test_tmp/
+/runs/
+/snapshots/
+/releases/
+/EXPERIMENT_LOG.md
+/VALIDATION.md
+/evaluation/extraction_v1/heldout_wording.json
+# Contains a local user path and private session identifier; five other
+# reviewed product screenshots remain public. Original is preserved locally.
+/submission/public_submission_v1/06-readback-evidence.jpg
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# All real configuration is private; examples remain placeholders.
+/config/*
+!/config/cortex.example.json
+!/config/cortex.public.example.json
+!/config/cortex.public.offline.json
+!/config/tools.example.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*credentials*.json
+*.sqlite*
+*.db
+*.db-*
+*.log
+*.jsonl
+*.zip
+*.whl
+*.tar
+*.gz
+*.7z

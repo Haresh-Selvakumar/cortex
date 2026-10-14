@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "compare",
+      "task_type": "analysis",
+      "goal": "Compare suppliers",
+      "execution_kind": "supplier",
+      "required_inputs": [
+        "user_goal",
+        "supplier_task"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "analysis",
+        "supplier_analysis"
+      ],
+      "expected_output": "supplier_recommendation",
+      "completion_checks": [
+        "supplier_verified"
+      ]
+    },
+    {
+      "id": "summary",
+      "task_type": "documents",
+      "goal": "Draft a short recommendation using the verified supplier outcome.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "predecessor_outputs"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [
+        "compare"
+      ],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}

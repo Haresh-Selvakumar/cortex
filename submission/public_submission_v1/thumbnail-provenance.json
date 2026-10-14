@@ -1,0 +1,11 @@
+{
+  "type": "original code-drawn brand graphic; not product evidence",
+  "dimensions": [
+    1200,
+    800
+  ],
+  "bytes": 45639,
+  "sha256": "7a69c92b6a5723cb0287e87173443d91930730a3b637e082cb73820f6e5ad009",
+  "generator": "scripts/make_submission_thumbnail.py",
+  "imagegen_used": false
+}

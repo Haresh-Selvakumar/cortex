@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "output_dir": ".cortex/output",
+  "notification_log": ".cortex/notifications.jsonl",
+  "max_operations": 8,
+  "event_requirements": [],
+  "git_targets": {}
+}

@@ -1,0 +1,44 @@
+# Unvalidated container recipe. Requires Docker Compose and a TLS ingress.
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    command: ["web", "--public", "--host", "0.0.0.0", "--port", "8765", "--origin", "${CORTEX_PUBLIC_ORIGIN:?Set exact HTTPS origin}", "--state-dir", "/data/browser", "--config", "${CORTEX_MODEL_CONFIG:-/app/config/cortex.public.offline.json}"]
+    environment:
+      CORTEX_PUBLIC_ORIGIN: "${CORTEX_PUBLIC_ORIGIN}"
+    volumes: ["state:/data"]
+    ports: ["127.0.0.1:8765:8765"]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os,urllib.request,urllib.parse; urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8765/healthz',headers={'Host':urllib.parse.urlsplit(os.environ['CORTEX_PUBLIC_ORIGIN']).netloc}),timeout=3).read()"]
+      interval: 10s
+      timeout: 4s
+      retries: 3
+  scheduler:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    command: ["web-reminders", "--state-dir", "/data/browser", "--seconds", "86400"]
+    volumes: ["state:/data"]
+    restart: unless-stopped
+    read_only: true
+    tmpfs: ["/tmp"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    depends_on:
+      web:
+        condition: service_healthy
+  ollama:
+    image: ollama/ollama:0.31.2
+    profiles: ["ai"]
+    volumes: ["models:/root/.ollama"]
+    restart: unless-stopped
+    # Deliberately no published port; configure compute for the chosen host.
+volumes:
+  state:
+  models:

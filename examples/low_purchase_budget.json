@@ -1,0 +1,6 @@
+{
+  "quantity": 100,
+  "budget": "9000",
+  "deadline_days": 3,
+  "source": "[{\"supplier\":\"Alpha\",\"unit_price\":\"100\",\"shipping\":\"0\",\"quantity_available\":200,\"delivery_days\":2}]"
+}

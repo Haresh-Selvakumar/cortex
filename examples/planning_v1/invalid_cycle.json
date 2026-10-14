@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "first",
+      "task_type": "documents",
+      "goal": "Draft first",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "predecessor_outputs"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [
+        "second"
+      ],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    },
+    {
+      "id": "second",
+      "task_type": "documents",
+      "goal": "Draft second",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "predecessor_outputs"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [
+        "first"
+      ],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}

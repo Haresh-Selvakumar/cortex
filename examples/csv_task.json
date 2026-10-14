@@ -1,0 +1,6 @@
+{
+  "quantity": 100,
+  "budget": "13000",
+  "deadline_days": 3,
+  "source": "name,price,freight,stock,lead_days\nAlpha,100,2500,200,2\nBeta,110,500,150,3\nGamma,90,300,200,5\n"
+}

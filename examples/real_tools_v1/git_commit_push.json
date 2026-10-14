@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "steps": [{
+    "id": "commit_and_push", "task_type": "analysis", "goal": "Commit only description.md and push to the explicitly authorized branch.",
+    "execution_kind": "tool", "required_inputs": ["user_goal"], "missing_essential_information": [], "depends_on": [],
+    "required_capabilities": ["analysis", "github"], "expected_output": "tool_result", "completion_checks": ["tool_verified"],
+    "tool": {"name": "git_commit_push", "arguments": {"repository": "authorized", "branch": "submission-demo", "files": ["description.md"], "message": "Add project description"}}
+  }]
+}

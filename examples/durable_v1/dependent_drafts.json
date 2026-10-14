@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "intro",
+      "task_type": "documents",
+      "goal": "Draft exactly one sentence introducing Cortex.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    },
+    {
+      "id": "limitation",
+      "task_type": "documents",
+      "goal": "Summarize the accepted introduction in one short sentence.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "predecessor_outputs"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [
+        "intro"
+      ],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}

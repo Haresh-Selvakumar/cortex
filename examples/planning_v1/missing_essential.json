@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "draft",
+      "task_type": "documents",
+      "goal": "Draft an announcement.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal"
+      ],
+      "missing_essential_information": [
+        "Target audience"
+      ],
+      "depends_on": [],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    },
+    {
+      "id": "summary",
+      "task_type": "documents",
+      "goal": "Summarize the announcement.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "predecessor_outputs"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [
+        "draft"
+      ],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Cortex is a Python prototype that routes work through configured models and deterministic tools. It verifies supplier arithmetic in Python and records budget use. Accepted prose passes only declared checks. No event requirements have been supplied.

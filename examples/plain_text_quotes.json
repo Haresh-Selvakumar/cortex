@@ -1,0 +1,6 @@
+{
+  "quantity": 100,
+  "budget": "13000",
+  "deadline_days": 3,
+  "source": "Supplier Alpha: unit price is 100. Shipping per order is 2500. Available stock is 200 units. Delivery is 2 days.\n\nSupplier Beta: unit price is 110. Shipping per order is 500. Available stock is 150 units. Delivery is 3 days."
+}

@@ -1,0 +1,106 @@
+{
+  "public_deployment": false,
+  "wheel_sha256": "1288ea2a3e2dbeb49eb2ed51e9ef7c7406b093b796d751bea4c3995f826e0442",
+  "assets": [
+    {
+      "file": "01-request-input.jpg",
+      "bytes": 26256,
+      "sha256": "e31b8723c3b2c219e371efbd93353e771fcc32c1ab033b624cc5909f287a1e2e",
+      "dimensions": [
+        494,
+        491
+      ],
+      "format": "JPEG",
+      "caption": "Actual local owner input; 40-word job (private ID omitted)",
+      "source": "native in-app browser screenshot; no visual fabrication or editing"
+    },
+    {
+      "file": "02-routing.jpg",
+      "bytes": 22377,
+      "sha256": "6b83401940793f2e242eb3102bb2a54588641db7c902bf6ac6bbec914d3f1e07",
+      "dimensions": [
+        494,
+        491
+      ],
+      "format": "JPEG",
+      "caption": "Actual worker selection; local Ollama qwen2.5:7b-instruct; same failed job",
+      "source": "native in-app browser screenshot; no visual fabrication or editing"
+    },
+    {
+      "file": "03-verification-refinement.jpg",
+      "bytes": 26320,
+      "sha256": "63cfa28947e62dc971bf491a74dc3ffb0f77e06658c0f789b601dd93be18d834",
+      "dimensions": [
+        494,
+        491
+      ],
+      "format": "JPEG",
+      "caption": "Actual failed word check:44>40; history also records41>40 repair",
+      "source": "native in-app browser screenshot; no visual fabrication or editing"
+    },
+    {
+      "file": "04-blocked-completion.jpg",
+      "bytes": 16588,
+      "sha256": "cf88000c7744db594cbc3936149c89f33dba7a06eb268c12fed72614e6371221",
+      "dimensions": [
+        494,
+        491
+      ],
+      "format": "JPEG",
+      "caption": "Actual failed refinement and dependent save blocked",
+      "source": "native in-app browser screenshot; no visual fabrication or editing"
+    },
+    {
+      "file": "05-file-completion.jpg",
+      "bytes": 22351,
+      "sha256": "6849531319d9956ee06ac48f8c28a79d5fa8b3077a48cbd41b7b1257df18f70d",
+      "dimensions": [
+        494,
+        491
+      ],
+      "format": "JPEG",
+      "caption": "Separate accepted80-word job(private ID omitted); registered file tool",
+      "source": "native in-app browser screenshot; no visual fabrication or editing"
+    },
+    {
+      "file": "cortex-thumbnail-1200x800.png",
+      "bytes": 45639,
+      "sha256": "7a69c92b6a5723cb0287e87173443d91930730a3b637e082cb73820f6e5ad009",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "format": "PNG",
+      "caption": "Original code-drawn Cortex branding; not execution evidence"
+    },
+    {
+      "file": "project-description.md",
+      "bytes": 3182,
+      "sha256": "b3a9d74d07e87ea8b2224672920ff9a46c5a8d5d0a34d37f66a93403cae8fbdf"
+    },
+    {
+      "file": "thumbnail-provenance.json",
+      "bytes": 303,
+      "sha256": "97333659480d04e67655a3b4f2b3cd29208b0b88a38b1271ab5a074f6d60a26d"
+    },
+    {
+      "file": "two-minute-demo.md",
+      "bytes": 3159,
+      "sha256": "e8d5d9f0553ffb2371806cf00bee981fdf79b920323abe247f93cdf6de802c06"
+    }
+  ],
+  "browser_mode": "local owner; not public hosted",
+  "private_evidence": "Raw live traces and original complete asset manifest are preserved locally; excluded from Git.",
+  "privacy_review": {
+    "date": "2026-10-14",
+    "included_screenshots": 5,
+    "excluded": [
+      {
+        "file": "06-readback-evidence.jpg",
+        "reason": "Local user path and private session identifier visible; original retained locally."
+      }
+    ],
+    "image_edits": false,
+    "image_metadata": "Checked by publication_audit.py; visual inspection performed separately."
+  }
+}

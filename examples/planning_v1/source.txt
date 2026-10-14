@@ -1,0 +1,1 @@
+Cortex selects eligible workers, verifies supplier calculations, and records bounded execution traces.

@@ -1,0 +1,8 @@
+{
+  "fixture_kind": "synthetic regression inputs; not recorded model responses",
+  "purpose": "Reject an invented currency when authoritative supplier data specifies none. Original live failures stay private.",
+  "drafts": [
+    "Recommend Beta with a total of $11,500.",
+    "Beta is feasible with a total of EUR 11500."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "providers": {"ollama": {"base_url": "https://ollama.internal.example.invalid", "timeout": 60}},
+  "roles": {"classifier": "local-classifier", "planner": "local-worker", "worker": null},
+  "models": [
+    {"id": "local-classifier", "provider": "ollama", "model": "qwen2.5:3b-instruct",
+      "task_types": ["analysis", "coding", "documents", "scheduling", "mixed"],
+      "capabilities": ["text_generation", "structured_output", "classification"],
+      "structured_output": true, "tools": false, "priority": 10, "pricing": {}},
+    {"id": "local-worker", "provider": "ollama", "model": "qwen2.5:7b-instruct",
+      "task_types": ["analysis", "coding", "documents"],
+      "capabilities": ["analysis", "text_generation", "structured_output", "quote_extraction", "code_generation", "document_draft"],
+      "structured_output": true, "tools": false, "priority": 20, "pricing": {}}
+  ]
+}

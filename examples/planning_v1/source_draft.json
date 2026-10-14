@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "id": "draft",
+      "task_type": "documents",
+      "goal": "Draft one sentence describing the supplied source.",
+      "execution_kind": "text_draft",
+      "required_inputs": [
+        "user_goal",
+        "source_material"
+      ],
+      "missing_essential_information": [],
+      "depends_on": [],
+      "required_capabilities": [
+        "document_draft"
+      ],
+      "expected_output": "text_draft",
+      "completion_checks": [
+        "text_present"
+      ]
+    }
+  ]
+}
